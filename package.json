@@ -1,0 +1,27 @@
+{
+  "name": "watson-reader",
+  "version": "1.0.0",
+  "description": "An app that allows you to play with voice-modulation settings in the text-to-speech reader from IBM's Watson API. Built in Angular.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devinbjackson/watson-reader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devinbjackson/watson-reader/issues"
+  },
+  "homepage": "https://github.com/devinbjackson/watson-reader#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "watson-developer-cloud": "^3.0.4"
+  }
+}
