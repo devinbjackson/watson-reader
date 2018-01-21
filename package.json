@@ -23,5 +23,6 @@
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "watson-developer-cloud": "^3.0.4"
-  }
+  },
+  "proxy": "http://localhost:3003"
 }

@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-box{
+    background: orange; 
+    width:40vw;
+}
+
+@media (max-width: 600px){
+    .quote-box {
+        background: rgb(0, 255, 21); 
+        width:90vw;
+        }
+    }
+@media (max-width: 500px){
+.quote-box {
+    background: blue; 
+    }
+}
+
+.voice-box{
+    background: red; 
+    width:40vw;
+}
+
+@media (max-width: 600px){
+    .voice-box {
+        background: brown; 
+        width:90vw;
+        }
+    }
+@media (max-width: 500px){
+.voice-box {
+    background: purple; 
+    }
+}
