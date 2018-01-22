@@ -12,12 +12,13 @@
 
   <body>
 
-
-    <div ng-controller='mainCtrl' class="quote-box">{{quote.quoteText}}{{quote.quoteAuthor}}</div>
-    <div ng-controller='mainCtrl' class="voice-box">Voice Pick
-    <button ng-click="speak(quote.quoteText, voice)">Speak</button>
-    </div>
-
+    <section ng-controller="mainCtrl">
+    <div class="quote-box">{{quote.quoteText}}{{quote.quoteAuthor}}
+    </div><button ng-click="newQuote()">New Quote</button>
+    <div class="voice-box">Voice Pick
+    <button ng-click="generateAudio(quote.quoteText, voice)">Generate Audio</button>
+     </div><button ng-click="speak()">Speak</button>
+</section>
     <!-- Including angular and ui-router then our javascript files. ORDER MATTERS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
     <!--Our Custom Script Files-->
