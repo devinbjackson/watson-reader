@@ -13,10 +13,10 @@ app.use(cors())
 
 
 app.get('/api/quotes', (req, res, next) => {
-    axios.get("http://api.forismatic.com/api/1.0/?method=getQuote&key=999999&format=json&lang=en")
+    (axios.get("http://api.forismatic.com/api/1.0/?method=getQuote&key=999999&format=json&lang=en")
     .then(function(response) { 
-      return response.data;
-    })
+      res.json(response.data)
+    }))
 })
 
 
