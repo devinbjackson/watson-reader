@@ -2,6 +2,9 @@ const express = require("express")
 const { json } = require("body-parser")
 const cors = require('cors');
 const axios = require('axios');
+const TextToSpeechV1 = require('watson-developer-cloud/text-to-speech/v1');
+var fs = require('fs');
+var config = require("./config.js")
 
 const app = express()
 
@@ -17,6 +20,24 @@ app.get('/api/quotes', (req, res, next) => {
     .then(function(response) { 
       res.json(response.data)
     }))
+})
+
+app.get('/api/voice/:text/:voice', (req, res, next) => {
+    const {username, password} = config;
+    var text_to_speech = new TextToSpeechV1 ({
+        username,
+        password
+      });
+      const {text, voice} = req.params
+      var params = {
+        text,
+        voice,
+        accept: 'audio/wav'
+      };  
+      text_to_speech.synthesize(params).on('error', function(error) {
+        console.log('Error:', error);
+      }).pipe(fs.createWriteStream('./audio/quote_audio.wav'));
+      res.json('done')
 })
 
 
